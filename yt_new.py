@@ -11,19 +11,19 @@ from datetime import datetime
 from pandas import json_normalize
 
 # YouTube API setup
-api_key = 'AIzaSyAbUPGkECjLGTipq6KipdkOrfg5KXX5QBg'
+api_key = 'your_api_key'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # MongoDB setup
-client = pymongo.MongoClient("mongodb+srv://hema_mukundan:ALMh_gr43SdABra@cluster0.ivcubxu.mongodb.net/")
+client = pymongo.MongoClient("mongodb+srv://username:password@cluster0.ivcubxu.mongodb.net/")
 mydb = client["YT_Project"]
 channel_collection = mydb['yt_channels']
 
 # MySQL setup
 connection = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="Data23Wrangl#",
+    user="username",
+    password="password",
     database='yt_db'
 )
 cursor = connection.cursor(buffered=True)
